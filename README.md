@@ -31,4 +31,4 @@ Open it through the server, not by double-clicking `index.html`: the 3D model an
 ## Deploying
 The frontend is static, but the bot needs the backend running somewhere (Render, Railway, a VPS). Set the `.env` values as environment variables there. Never commit `backend/.env`.
 
-Avatar made at avaturn.me (free for non-commercial use). `avatarsdk.glb` is a spare sample avatar from the TalkingHead project.
+Avatar made at avaturn.me (free for non-commercial use).
