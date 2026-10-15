@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: radha-portfolio
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    domains:
+      - portfolio.raadha.dev
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: GEMINI_API_KEY
+        sync: false   # Render asks for this when you create the service. Never commit it.
+      - key: GEMINI_MODEL
+        value: gemini-flash-latest,gemini-flash-lite-latest
+      - key: TTS_VOICE
+        value: en-IN-PrabhatNeural
+      - key: MAX_REQUESTS_PER_HOUR
+        value: "40"

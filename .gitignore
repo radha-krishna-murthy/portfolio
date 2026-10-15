@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+# spare sample avatar, not used by the site
+frontend/avatars/avatarsdk.glb
