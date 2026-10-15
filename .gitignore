@@ -1,4 +1,42 @@
+# --- Secrets (never commit API keys) ---
 .env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# --- Python ---
 .venv/
+venv/
+env/
 __pycache__/
-*.pyc
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# --- Logs and temp files ---
+*.log
+*.tmp
+*.bak
+*.swp
+~$*
+
+# --- Editors and IDEs ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- Operating system ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Node (if a build step is ever added) ---
+node_modules/
